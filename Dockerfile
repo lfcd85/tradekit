@@ -24,5 +24,7 @@ RUN wget http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz && \
 
 RUN rm -R ta-lib ta-lib-0.4.0-src.tar.gz
 
+# ref: https://stackoverflow.com/questions/64663862/cant-install-h5py
+RUN apt-get install -y libhdf5-dev
 # install popular Python packages
 RUN pip3 install -r requirements.txt
